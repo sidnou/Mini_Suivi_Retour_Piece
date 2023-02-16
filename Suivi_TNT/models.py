@@ -6,7 +6,7 @@ from django.db import models
 class SuiviRetourPieceHP(models.Model):
     reference = models.CharField(max_length=25)
     numero_commande = models.CharField(max_length=25, null=False)
-    numero_dossier = models.CharField(max_length=25, null=False)
+    numero_dossier = models.CharField(max_length=15, null=False)
     numero_suivi = models.CharField(max_length=25, unique=True, null=False)
     date_creation = models.DateField(auto_now_add=True)
 
