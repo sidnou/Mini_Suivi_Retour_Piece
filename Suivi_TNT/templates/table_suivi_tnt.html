@@ -1,0 +1,24 @@
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="table-success">
+        <tr>
+            <th>Référence</th>
+            <th>Numéro Commande</th>
+            <th>Numèro Dossier</th>
+            <th>Numèro de Suivi TNT</th>
+            <th>Date Création</th>
+        </tr>
+        </thead>
+        <tbody class="table-group-divider">
+        {% for DataTabSuiviTnt in DataTabSuiviTnts %}
+            <tr>
+                <td>{{ DataTabSuiviTnt.reference }}</td>
+                <td>{{ DataTabSuiviTnt.numero_commande }}</td>
+                <td>{{ DataTabSuiviTnt.numero_dossier }}</td>
+                <td>{{ DataTabSuiviTnt.numero_suivi }}</td>
+                <td>{{ DataTabSuiviTnt.date_creation }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
