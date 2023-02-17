@@ -30,5 +30,6 @@ def add_suivi_tnt(request):
     }
     if request.method == "POST":
         forms = SuiviTntForm(request.POST)
-        print(forms)
+        if forms.is_valid():
+            forms.save()
     return render(request, "Suivi_TNT/add-suivi-tnt.html", context)
