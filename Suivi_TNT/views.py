@@ -29,7 +29,11 @@ def add_suivi_tnt(request):
         'Forms': SuiviTntForm,
     }
     if request.method == "POST":
-        forms = SuiviTntForm(request.POST)
-        if forms.is_valid():
-            forms.save()
+        forms_suivi_tnt = SuiviTntForm(request.POST)
+        # print(forms_suivi_tnt.is_valid())
+        print(type(forms_suivi_tnt.errors))
+        if forms_suivi_tnt.is_valid():
+            forms_suivi_tnt.save()
+        else:
+            context['Erreur'] = forms_suivi_tnt.errors
     return render(request, "Suivi_TNT/add-suivi-tnt.html", context)

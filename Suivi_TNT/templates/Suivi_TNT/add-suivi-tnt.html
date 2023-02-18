@@ -4,9 +4,14 @@
         <h1>{{ Titre }}</h1>
     </div>
     <div>
+                {{ Erreur }}
+
+
         <form action="#" method="post">
             {% csrf_token %}
-            {{ Forms.as_p }}
+
+            {{ Forms.as_div }}
+
             <input class="btn btn-success" type="submit" value="Enregistrer">
         </form>
     </div>
