@@ -7,7 +7,7 @@ class SuiviTntForm(forms.ModelForm):
         model = SuiviRetourPieceHP
         fields = "__all__"
         widgets = {
-            'reference': forms.TextInput(attrs={'class': 'form-control mb-1'}),
+            'reference': forms.TextInput(attrs={'class': 'form-control m-1'}),
             'numero_commande': forms.TextInput(attrs={'class': 'form-control mb-1'}),
             'numero_dossier': forms.TextInput(attrs={'class': 'form-control mb-1'}),
             'numero_suivi': forms.TextInput(attrs={'class': 'form-control mb-1'})

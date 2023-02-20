@@ -3,11 +3,11 @@
     <div class="text-center">
         <h1>{{ Titre }}</h1>
     </div>
-    <div>
+    <div class="row justify-content-center ">
                 {{ Erreur }}
 
 
-        <form action="#" method="post">
+        <form action="{% url 'add-suivi-tnt' %}" method="post" class="col">
             {% csrf_token %}
 
             {{ Forms.as_div }}
