@@ -1,19 +1,24 @@
 {% extends 'base.html' %}
 {% block main %}
-    <div class="text-center">
+    <div class="text-center mb-3 mt-3">
         <h1>{{ Titre }}</h1>
     </div>
     <div class="row justify-content-center ">
+
+
+        <div class="col-4">
                 {{ Erreur }}
 
-
-        <form action="{% url 'add-suivi-tnt' %}" method="post" class="col">
-            {% csrf_token %}
-
-            {{ Forms.as_div }}
-
-            <input class="btn btn-success" type="submit" value="Enregistrer">
-        </form>
+            <form action="{% url 'add-suivi-tnt' %}" method="post" class="col">
+                {% csrf_token %}
+                <div class="">
+                    {{ Forms }}
+                </div>
+                <div class="mb-2 mt-3">
+                    <input class="btn btn-success" type="submit" value="Enregistrer">
+                </div>
+            </form>
+        </div>
     </div>
 
     {% include 'table_suivi_tnt.html' %}
