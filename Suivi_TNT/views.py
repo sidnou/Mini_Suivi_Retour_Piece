@@ -31,7 +31,7 @@ def add_suivi_tnt(request):
     if request.method == "POST":
         forms_suivi_tnt = SuiviTntForm(request.POST)
         # print(forms_suivi_tnt.is_valid())
-        print(type(forms_suivi_tnt.errors))
+
         if forms_suivi_tnt.is_valid():
             forms_suivi_tnt.save()
         else:
