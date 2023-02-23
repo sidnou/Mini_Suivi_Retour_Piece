@@ -3,6 +3,10 @@
     <div class="text-center">
         <h1>{{ Titre }}</h1>
     </div>
-
+    <div>
+        <a class="text-decoration-none" href="{% url 'add-suivi-tnt' %}">
+            <input class="btn btn-success" type="button" value="Ajout Suivi TNT">
+        </a>
+    </div>
     {% include 'table_suivi_tnt.html' %}
 {% endblock %}
