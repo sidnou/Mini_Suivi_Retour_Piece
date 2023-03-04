@@ -28,11 +28,18 @@ class SuiviRetourPieceHPTestCase(TestCase):
         self.assertEqual(suivi_tnt.numero_dossier, 'M67S-9999-99999')
         self.assertEqual(suivi_tnt.numero_suivi, '12345678909876')
 
-    def test_vue_suivi_tnt(self):
+    def test_vue_ajout_suivi_tnt(self):
         browser = webdriver.Chrome()
         browser.get('http://127.0.0.1:8000/suivi-tnt/add/')
         titre = browser.title
         assert titre == "Ajout Suivi TNT"
+        browser.quit()
+
+    def test_vue_suivi_tnt(self):
+        browser = webdriver.Chrome()
+        browser.get('http://127.0.0.1:8000/suivi-tnt/')
+        titre = browser.title
+        assert titre == "Suivi TNT"
         browser.quit()
 
     def test_add_suivi_tnt(self):
