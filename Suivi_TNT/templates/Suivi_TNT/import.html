@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block main %}
+   <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="file">Selectionner un fichier CSV</label>
+        <input type="file" class="form-control-file" id="file" name="file">
+    </div>
+    <button type="submit" class="btn btn-primary">Importer</button>
+</form>
+{% endblock %}
